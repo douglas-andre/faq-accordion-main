@@ -45,8 +45,9 @@ Users should be able to:
 
 ## Links
 
-* Solution URL: [Add your solution URL here](https://www.frontendmentor.io/solutions)
-* Live Site URL: [Add your live site URL here](https://your-live-site-url.com)
+* Solution URL: [Solution](https://www.frontendmentor.io/solutions/faq-accordion-using-html5-css3-and-vanilla-javascript-yJqRxQD1El)
+
+* Live Site URL: [View Live Site](https://faq-accordion-main-theta-wheat.vercel.app/)
 
 ---
 
