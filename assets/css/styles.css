@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --link: hsl(228, 45%, 44%);
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+    --purple-1000: #AD28EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Work Sans", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Purple-100);
+    font-size: 1.6rem;
+}
+
+/* TOP BG */
+
+.top-bg {
+    height: 250px;
+    background-image: url('../images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+/* ACCORDION */
+
+.accordion {
+    max-width: 600px;
+    width: calc(100% - 5rem);
+
+    background-color: var(--White);
+
+    border-radius: 1rem;
+
+    margin: auto;
+    margin-top: -15rem;
+
+    padding: 2.5rem;
+}
+
+/* HEADER */
+
+.h1Container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 2.5rem;
+}
+
+.h1Container img {
+    max-width: 2.4rem;
+}
+
+/* ITEMS */
+
+.item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+
+    border-bottom: 1px solid var(--Purple-100);
+}
+
+.item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+/* ACCORDION TITLE */
+
+.item .title {
+    all: unset;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.item .title:focus-visible {
+    outline: 2px solid var(--purple-1000);
+    outline-offset: 4px;
+}
+
+.item .title p {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    color: var(--Purple-950);
+}
+
+.item .title:hover p{
+    color: var(--purple-1000);
+}
+
+/* ACCORDION TEXT */
+
+.accBody {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.accBody p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+
+    color: var(--Purple-600);
+}
+
+/* STATES */
+
+.item.opened .accBody {
+    padding-top: 1.5rem;
+    max-height: 100vh;
+}
+
+/*  FOOTER  */
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--link);
+}
+
+/* DESKTOP */
+
+@media (width > 1440px) {
+
+    .top-bg {
+        background-image: url('../images/background-pattern-desktop.svg');
+    }
+
+    .accordion {
+        margin-top: -10rem;
+        border-radius: 2rem;
+        padding: 4rem;
+    }
+
+    .h1Container {
+        font-size: 3rem;
+        letter-spacing: -3px;
+
+        margin-bottom: 3rem;
+    }
+
+    .h1Container img {
+        max-width: 100%;
+    }
+
+    .item {
+        margin-bottom: 3rem;
+    }
+
+    .item .title p {
+        font-size: 1.8rem;
+    }
+
+    .accBody p {
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
+}
